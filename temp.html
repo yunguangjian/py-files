@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外观设计专利申请实战指南 - 演讲稿</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #004e92);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #1a2a6c, #004e92);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            right: -30px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .presenter {
+            font-size: 1.2rem;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            margin-top: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            border-left: 5px solid #1a2a6c;
+            background: #f8f9fa;
+            border-radius: 0 10px 10px 0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #1a2a6c, #004e92);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "◆";
+            margin-right: 10px;
+            color: #004e92;
+        }
+
+        h3 {
+            color: #004e92;
+            margin: 15px 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: "•";
+            margin-right: 8px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        li::before {
+            content: "▪";
+            position: absolute;
+            left: -20px;
+            color: #1a2a6c;
+        }
+
+        .time-indicator {
+            display: inline-block;
+            background: #1a2a6c;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-left: 15px;
+        }
+
+        .tip {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .warning {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .download-container {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            border-top: 1px solid #dee2e6;
+            position: relative;
+        }
+
+        .download-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #1a2a6c, #004e92);
+        }
+
+        .download-btn {
+            background: linear-gradient(to right, #1a2a6c, #004e92);
+            color: white;
+            padding: 16px 45px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn::after {
+            content: "↓";
+            margin-left: 10px;
+            font-size: 1.4rem;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #004e92, #1a2a6c);
+        }
+
+        .download-btn:active {
+            transform: translateY(1px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1a2a6c;
+            color: white;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .highlight {
+            background: linear-gradient(transparent 60%, rgba(255, 235, 59, 0.7) 60%);
+            padding: 0 5px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            height: 5px;
+            background: #e0e0e0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, #1a2a6c, #004e92);
+            width: 0;
+            transition: width 0.4s ease;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>外观设计专利申请实战指南</h1>
+            <div class="subtitle">专利代理人内部培训师技能比赛</div>
+            <div class="presenter">主讲人：赵旭颖</div>
+            <div class="logo">深圳国海智峰知识产权代理事务所（普通合伙）唐山分所</div>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>开场白<span class="time-indicator">1分钟</span></h2>
+                <p>尊敬的各位评委、各位同事：大家下午好！我是来自国海智峰的专利代理人赵旭颖。今天非常荣幸能在这里与大家分享《外观设计专利申请实战指南》。</p>
+                <p>在创新驱动发展的时代背景下，外观设计专利作为知识产权的重要组成部分，对企业产品差异化竞争和品牌价值提升具有战略意义。然而，许多企业在申请过程中常因专业度不足而遭遇驳回风险。</p>
+                <p>本次演讲将聚焦四大核心模块：检索查新策略、申请布局技巧、图片处理规范和简要说明撰写，通过<span class="highlight">实战案例解析</span>，帮助大家掌握高效通过外观专利申请的关键技巧。</p>
+            </div>
+
+            <div class="section">
+                <h2>一、检索查新策略<span class="time-indicator">3分钟</span></h2>
+                <div class="tip">
+                    <strong>核心目的：</strong>避免重复申请，预判授权风险
+                </div>
+
+                <h3>关键四步法</h3>
+                <ul>
+                    <li><strong>选择检索平台：</strong>推荐使用HimmPat和外观设计专利检索公共服务系统</li>
+                    <li><strong>组合检索关键词：</strong>产品名称+设计特征+功能用途（如"台灯+弧形灯罩+可调节亮度"）</li>
+                    <li><strong>确定产品分类号：</strong>精准匹配LOC分类体系（如06-04类家具）</li>
+                    <li><strong>相似度对比分析：</strong>关注"三同"原则——相同/相近种类、用途相同/相近、局部细微差异</li>
+                </ul>
+
+                <div class="warning">
+                    <strong>实战提示：</strong>对疑似冲突设计需保存对比报告，采用"整体观察+要部判断"法进行侵权风险评估
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>二、申请布局技巧<span class="time-indicator">4分钟</span></h2>
+                <h3>四种布局策略对比</h3>
+
+                <div class="tip">
+                    <h3>1. 普通外观专利</h3>
+                    <p>适用场景：<span class="highlight">单个产品</span>的外观保护（如独立设计的咖啡杯）</p>
+                </div>
+
+                <div class="tip">
+                    <h3>2. 系列外观专利</h3>
+                    <p>适用场景：同一产品的<span class="highlight">相似设计群保护</span>（如手机不同配色版本）</p>
+                    <p><strong>规则要点：</strong>整体形状相似+细微区别，单件申请上限10项</p>
+                </div>
+
+                <div class="tip">
+                    <h3>3. 组件外观专利</h3>
+                    <p>适用场景：多构件<span class="highlight">组合产品</span>（如组合家具、模块化设备）</p>
+                    <p><strong>保护特点：</strong>所有构件作为一件产品整体保护</p>
+                    <p><strong>视图要求：</strong>必须提供组合状态图</p>
+                </div>
+
+                <div class="tip">
+                    <h3>4. 套件外观专利</h3>
+                    <p>适用场景：<span class="highlight">成套独立产品</span>（如茶具套装、组合餐具）</p>
+                    <p><strong>三大条件：</strong>同一大类+设计构思相同+独立使用价值</p>
+                    <p><strong>保护优势：</strong>每个套件均可单独主张权利</p>
+                </div>
+
+                <div class="warning">
+                    <strong>决策树：</strong>当构件符合组件条件但不具备单独授权条件→申请组件专利；当部分构件具备创新性→组件与单件组合申请；当所有构件均创新且符合套件条件→优先选择套件保护
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>三、图片处理规范<span class="time-indicator">4分钟</span></h2>
+
+                <h3>三大图片类型处理规范</h3>
+                <ul>
+                    <li><strong>线稿图：</strong>SolidWorks导出CAD→删除多余线→补充断线部位</li>
+                    <li><strong>渲染图：</strong>Creo三维建模→专业渲染（参考操作视频）</li>
+                    <li><strong>照片：</strong>三角架固定→十字定位→垂直拍摄→专业抠图</li>
+                </ul>
+
+                <h3>核心规范要求</h3>
+                <ul>
+                    <li><strong>尺寸：</strong>3cm×8cm至15cm×22cm（缩小2/3仍清晰）</li>
+                    <li><strong>视图：</strong>立体产品提交六面视图+立体图</li>
+                    <li><strong>格式：</strong>JPEG格式，72-300 DPI</li>
+                    <li><strong>一致性：</strong>所有视图必须为同类型（渲染图/线稿图/照片）</li>
+                </ul>
+
+                <div class="warning">
+                    <h3>七大致命雷区</h3>
+                    <ol>
+                        <li>视图比例不一致（主后视图宽度≠俯仰视图宽度）</li>
+                        <li>图片分辨率不统一</li>
+                        <li>产品反光明显（明暗区域对比过大）</li>
+                        <li>产品背景对比不足（浅色产品用深蓝背景）</li>
+                        <li>线条不连贯（CAD导出虚线问题）</li>
+                        <li>包含他人商标/版权内容</li>
+                        <li>图片含二维码（需用纯色覆盖）</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>四、简要说明撰写<span class="time-indicator">2分钟</span></h2>
+
+                <h3>三大核心要素</h3>
+                <div class="tip">
+                    <h3>1. 产品名称</h3>
+                    <p><strong>规范：</strong>≤20字，避免抽象词（如"文具"）、技术描述（如"节油发动机"）</p>
+                    <p><strong>特殊处理：</strong>需保留型号时可括号标注（如"跑步机（H1）"）</p>
+                </div>
+
+                <div class="tip">
+                    <h3>2. 产品用途</h3>
+                    <p><strong>要求：</strong>明确产品类别，多用途需完整说明</p>
+                    <p><strong>示例：</strong>"用于照明的手电筒，同时可用于应急破窗"</p>
+                </div>
+
+                <div class="tip">
+                    <h3>3. 设计要点</h3>
+                    <p><strong>表述规范：</strong>平面产品→"要点在于图案"；立体产品→"要点在于形状"</p>
+                    <p><strong>色彩保护决策：</strong>当形状/图案与现有设计差异不足时，需请求色彩保护</p>
+                </div>
+
+                <div class="warning">
+                    <h3>高频补正点</h3>
+                    <ul>
+                        <li>错误省略视图（如"无设计要点省略仰视图"）</li>
+                        <li>未说明对称视图省略依据</li>
+                        <li>薄型/平面产品未规范描述视图省略原因</li>
+                        <li>系列专利未指定基本设计</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>结束语<span class="time-indicator">1分钟</span></h2>
+                <p>各位同事，今天我们系统梳理了外观设计专利申请的四大关键环节：</p>
+                <ul>
+                    <li>通过精准检索规避<span class="highlight">重复授权风险</span></li>
+                    <li>运用四种布局策略实现<span class="highlight">保护范围最大化</span></li>
+                    <li>遵循图片规范避免<span class="highlight">形式驳回</span></li>
+                    <li>撰写专业简要说明提升<span class="highlight">确权成功率</span></li>
+                </ul>
+                <p>在知识产权竞争日益激烈的今天，掌握这些实战技能将使我们能够为客户提供更高价值的服务。每件成功授权的外观专利背后，都是检索、布局、制图、撰写的专业集成。</p>
+                <p>让我们用专业赋能创新，助力中国智造！感谢大家的聆听！</p>
+                <div class="logo" style="margin-top:20px; text-align:center;">国海智峰 · 专业成就价值</div>
+            </div>
+        </div>
+
+        <div class="download-container">
+            <button class="download-btn" id="downloadBtn">下载Word格式演讲稿</button>
+        </div>
+
+        <footer>
+            <p>深圳国海智峰知识产权代理事务所（普通合伙）唐山分所</p>
+            <p>© 2023 国海智峰 - 专业知识产权服务</p>
+        </footer>
+    </div>
+
+    <script>
+        // 滚动进度条
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight;
+            const clientHeight = document.documentElement.clientHeight;
+            const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+        });
+
+        // 下载功能
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // 创建下载提示
+            const alertBox = document.createElement('div');
+            alertBox.style.position = 'fixed';
+            alertBox.style.top = '20px';
+            alertBox.style.left = '50%';
+            alertBox.style.transform = 'translateX(-50%)';
+            alertBox.style.backgroundColor = '#4CAF50';
+            alertBox.style.color = 'white';
+            alertBox.style.padding = '15px 30px';
+            alertBox.style.borderRadius = '5px';
+            alertBox.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+            alertBox.style.zIndex = '1000';
+            alertBox.style.fontWeight = 'bold';
+            alertBox.style.fontSize = '1.1rem';
+            alertBox.innerHTML = '演讲稿正在生成并下载，请稍候...';
+            document.body.appendChild(alertBox);
+
+            // 模拟下载过程
+            setTimeout(() => {
+                alertBox.innerHTML = '演讲稿下载完成！文件名称: 外观设计专利申请实战指南演讲稿.docx';
+
+                // 创建下载链接
+                const content = document.documentElement.outerHTML;
+                const blob = new Blob([content], {type: 'application/msword'});
+                const url = URL.createObjectURL(blob);
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = '外观设计专利申请实战指南演讲稿.docx';
+                document.body.appendChild(a);
+                a.click();
+
+                // 清理
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+
+                    // 3秒后移除提示
+                    setTimeout(() => {
+                        document.body.removeChild(alertBox);
+                    }, 3000);
+                }, 100);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
